@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="348" id="KGk-i7-Jjw" customClass="RssItemTableViewCell" customModule="ImageOfTheDay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="348"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="348"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ykF-LD-KgK">
+                        <rect key="frame" x="20" y="11" width="373" height="326"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrK-QE-OIh">
+                                <rect key="frame" x="0.0" y="0.0" width="373" height="24"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="20"/>
+                                <color key="textColor" red="0.20546364297672193" green="0.16263357149500426" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ee-Ck-SUK">
+                                <rect key="frame" x="0.0" y="29" width="373" height="18"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Publish Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OE-RU-veW">
+                                <rect key="frame" x="0.0" y="52" width="373" height="18"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-j5-Joj">
+                                <rect key="frame" x="0.0" y="75" width="373" height="72"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="7Rt-f5-GGx">
+                                <rect key="frame" x="0.0" y="152" width="373" height="174"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-qT-2il">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="174"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="NasaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KDU-Tl-OwF">
+                                        <rect key="frame" x="99.666666666666686" y="0.0" width="174" height="174"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KDU-Tl-OwF" secondAttribute="height" multiplier="1:1" id="vtk-hU-iQh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cyL-1y-cuY">
+                                        <rect key="frame" x="273.66666666666669" y="0.0" width="99.333333333333314" height="174"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="diJ-qT-2il" firstAttribute="width" secondItem="cyL-1y-cuY" secondAttribute="width" id="5s0-KB-ZYK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.7156101731549257" green="0.84334062747875127" blue="0.85082607076625627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="ykF-LD-KgK" secondAttribute="bottom" id="HHg-3K-bv5"/>
+                    <constraint firstItem="ykF-LD-KgK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QyK-xm-ChJ"/>
+                    <constraint firstItem="KDU-Tl-OwF" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="Z3e-cS-ohC"/>
+                    <constraint firstItem="ykF-LD-KgK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bc9-mN-kOo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ykF-LD-KgK" secondAttribute="trailing" id="vHt-7G-q2U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="mainStackView" destination="ykF-LD-KgK" id="9TV-0N-OvJ"/>
+                <outlet property="rssDescription" destination="4Ee-Ck-SUK" id="syW-UY-cvV"/>
+                <outlet property="rssImage" destination="KDU-Tl-OwF" id="Vk0-3Z-V7P"/>
+                <outlet property="rssPublishDate" destination="4OE-RU-veW" id="Aag-JL-48t"/>
+                <outlet property="rssTitle" destination="rrK-QE-OIh" id="rqs-Pp-wVe"/>
+            </connections>
+            <point key="canvasLocation" x="209.92366412213741" y="126.7605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="NasaLogo" width="109.99800109863281" height="92"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

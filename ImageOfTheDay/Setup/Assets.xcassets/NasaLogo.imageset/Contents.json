@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "NasaLogo.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
