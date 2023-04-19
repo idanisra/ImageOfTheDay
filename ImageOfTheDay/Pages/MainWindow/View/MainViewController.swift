@@ -73,14 +73,14 @@ class MainViewController: UIViewController {
     // MARK: - Variables
     
     private var viewModel: MainViewModel = MainViewModel()
-    var rssItems = [RSSItem]() {
+    private var rssItems = [RSSItem]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.rssTableView.reloadData()
             }
         }
     }
-    var hasFeedStarted = false
+    private var hasFeedStarted = false
     
     // MARK: - Init
     
@@ -88,14 +88,61 @@ class MainViewController: UIViewController {
         
         super.viewDidLoad()
         
-        rssTableView.setupTableView(parentVC: self, nibName: RssItemTableViewCell.getReusableIdentifier())
-        rssTableView.isScrollEnabled = true
-        rssTableView.showsHorizontalScrollIndicator = false
-        rssTableView.showsVerticalScrollIndicator = false
+        setupTableView()
+        addKeyboardsObservers()
+        addTapGesture()
         
         viewModel.didReceiveRssItems = { rssItems in
             self.rssItems = rssItems
         }
+    }
+    
+    // MARK: - Private Functions
+    
+    private func setupTableView() {
+        
+        rssTableView.setupTableView(parentVC: self, nibName: RssItemTableViewCell.getReusableIdentifier())
+        rssTableView.isScrollEnabled = true
+        rssTableView.showsHorizontalScrollIndicator = false
+        rssTableView.showsVerticalScrollIndicator = false
+    }
+    
+    private func addKeyboardsObservers() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func addTapGesture() {
+     
+         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+
+        view.endEditing(true)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        
+        refreshTextField.resignFirstResponder()
     }
 }
 

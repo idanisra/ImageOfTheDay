@@ -35,7 +35,7 @@ class RssItemTableViewCell: UITableViewCell {
         
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
     
     // MARK: - Public Functions
@@ -49,12 +49,13 @@ class RssItemTableViewCell: UITableViewCell {
         guard let imageUrl = URL(string: presentable.enclosure) else { return }
        
         let resource = ImageResource(downloadURL: imageUrl)
+        
         rssImage.kf.indicatorType = .custom(indicator: CustomActivityIndicator())
         rssImage.kf.setImage(
             with: resource,
             placeholder: nil,
             options: [
-                .processor(DownsamplingImageProcessor(size: CGSize(width: frame.width / 2, height: frame.height / 2))),
+                .processor(DownsamplingImageProcessor(size: CGSize(width: rssImage.frame.width, height: rssImage.frame.height))),
                 .scaleFactor(UIScreen.main.scale),
                 .cacheOriginalImage
             ])

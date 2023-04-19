@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,25 +40,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-j5-Joj">
-                                <rect key="frame" x="0.0" y="75" width="373" height="72"/>
+                                <rect key="frame" x="0.0" y="75" width="373" height="39.666666666666657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="7Rt-f5-GGx">
-                                <rect key="frame" x="0.0" y="152" width="373" height="174"/>
+                                <rect key="frame" x="0.0" y="119.66666666666664" width="373" height="206.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-qT-2il">
-                                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="174"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="206.33333333333334"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="NasaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KDU-Tl-OwF">
-                                        <rect key="frame" x="99.666666666666686" y="0.0" width="174" height="174"/>
+                                        <rect key="frame" x="83.333333333333329" y="0.0" width="206.33333333333337" height="206.33333333333334"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KDU-Tl-OwF" secondAttribute="height" multiplier="1:1" id="vtk-hU-iQh"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cyL-1y-cuY">
-                                        <rect key="frame" x="273.66666666666669" y="0.0" width="99.333333333333314" height="174"/>
+                                        <rect key="frame" x="289.66666666666669" y="0.0" width="83.333333333333314" height="206.33333333333334"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -73,8 +73,8 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="ykF-LD-KgK" secondAttribute="bottom" id="HHg-3K-bv5"/>
                     <constraint firstItem="ykF-LD-KgK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QyK-xm-ChJ"/>
-                    <constraint firstItem="KDU-Tl-OwF" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="Z3e-cS-ohC"/>
                     <constraint firstItem="ykF-LD-KgK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bc9-mN-kOo"/>
+                    <constraint firstItem="KDU-Tl-OwF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="cwu-0W-p4K"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ykF-LD-KgK" secondAttribute="trailing" id="vHt-7G-q2U"/>
                 </constraints>
             </tableViewCellContentView>
